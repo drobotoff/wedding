@@ -5369,6 +5369,30 @@ body.page .main-navigation {
   background: #2792C9;
 }
 
+.wd-button-white {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: #33A4D5;
+  border: 1px solid #33A4D5;
+  box-sizing: border-box;
+  border-radius: 3px;
+  background: #ffffff;
+}
+
+.wd-button-white:hover, .wd-button-white:focus {
+  background: #ffffff;
+  border: 1px solid #2792C9;
+  box-sizing: border-box;
+  border-radius: 3px;
+}
+
+.wd-100 {
+  width: 100%;
+}
+
 .home-slider-top {
   position: relative;
   margin-top: -400px;
@@ -6674,6 +6698,55 @@ body.page .main-navigation {
 
 .top-menu .block-2 .block-2-container .items .item.selected, .top-menu .block-2 .block-2-container .items .item:hover {
   color: #33A4D4;
+}
+
+.review-description-container .review-description {
+  font-family: "Gilroy-Medium";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 30px;
+  color: #3D4C68;
+  margin-bottom: 50px;
+}
+
+.review-description-container .items .item {
+  margin-bottom: 90px;
+}
+
+.review-description-container .items .item .info-name .info-name-image {
+  float: left;
+}
+
+.review-description-container .items .item .info-name .info-name-text {
+  float: left;
+  font-family: "Gilroy-Medium";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 22px;
+  color: #0A2555;
+  margin-top: 40px;
+  margin-left: 40px;
+}
+
+.review-description-container .items .item .info-text {
+  font-family: "Gilroy-Medium";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 26px;
+  color: #3D4C68;
+  margin-bottom: 20px;
+}
+
+.review-description-container .items .item .info-text-more {
+  font-family: "Gilroy-Medium";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 20px;
+  color: #33A4D5;
 }
 
 /* Widgets */

@@ -10,7 +10,6 @@
   font-style: normal;
   font-weight: 500;
   font-size: 14px;
-  //line-height: 54px;
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: #ffffff;
@@ -18,6 +17,30 @@
   &:hover, &:focus {
     background: #2792C9;
   }
+}
+
+.wd-button-white{
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: #33A4D5;
+  border: 1px solid #33A4D5;
+  box-sizing: border-box;
+  border-radius: 3px;
+  background: #ffffff;
+
+  &:hover, &:focus {
+    background: #ffffff;
+    border: 1px solid #2792C9;
+    box-sizing: border-box;
+    border-radius: 3px;
+  }
+}
+
+.wd-100 {
+  width: 100%;
 }
 
 .home-slider-top {
@@ -1320,3 +1343,62 @@
 
 }
 
+.review-description-container{
+
+  .review-description {
+    font-family: "Gilroy-Medium";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 30px;
+    color: #3D4C68;
+    margin-bottom: 50px;
+  }
+
+  .items{
+
+    .item {
+
+      margin-bottom: 90px;
+
+      .info-name {
+
+          .info-name-image {
+            float: left;
+          }
+
+          .info-name-text {
+            float: left;
+            font-family: "Gilroy-Medium";
+            font-style: normal;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 22px;
+            color: #0A2555;
+            margin-top: 40px;
+            margin-left: 40px;
+          }
+      }
+
+      .info-text {
+        font-family: "Gilroy-Medium";
+        font-style: normal;
+        font-weight: normal;
+        font-size: 18px;
+        line-height: 26px;
+        color: #3D4C68;
+        margin-bottom: 20px;
+      }
+
+      .info-text-more {
+        font-family: "Gilroy-Medium";
+        font-style: normal;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 20px;
+        color: #33A4D5;
+      }
+    }
+  }
+
+}
