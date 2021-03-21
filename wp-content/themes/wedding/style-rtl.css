@@ -2771,18 +2771,9 @@ h3,
 h4,
 h5,
 h6 {
+  color: #085F97;
   clear: both;
   margin: 1rem 0;
-}
-
-h1:not(.site-title):before,
-h2:before {
-  background: #767676;
-  content: "\020";
-  display: block;
-  height: 2px;
-  margin: 1rem 0;
-  width: 1em;
 }
 
 h1:not(.site-title).has-text-align-center:before,
@@ -4489,15 +4480,6 @@ body.page .main-navigation {
   margin: 0;
 }
 
-.entry .entry-title:before {
-  background: #767676;
-  content: "\020";
-  display: block;
-  height: 2px;
-  margin: 1rem 0;
-  width: 1em;
-}
-
 .entry .entry-title.has-text-align-center:before {
   margin-right: auto;
   margin-left: auto;
@@ -4782,15 +4764,6 @@ body.page .main-navigation {
   display: inline;
 }
 
-.author-bio .author-title:before {
-  background: #767676;
-  content: "\020";
-  display: block;
-  height: 2px;
-  margin: 1rem 0;
-  width: 1em;
-}
-
 .author-bio .author-title.has-text-align-center:before {
   margin-right: auto;
   margin-left: auto;
@@ -4883,15 +4856,6 @@ body.page .main-navigation {
 
 .comments-area .comments-title-wrap .comments-title {
   margin: 0;
-}
-
-.comments-area .comments-title-wrap .comments-title:before {
-  background: #767676;
-  content: "\020";
-  display: block;
-  height: 2px;
-  margin: 1rem 0;
-  width: 1em;
 }
 
 .comments-area .comments-title-wrap .comments-title.has-text-align-center:before {
@@ -5395,8 +5359,36 @@ body.page .main-navigation {
   color: #ffffff;
 }
 
+.wd-button a {
+  color: #ffffff;
+}
+
 .wd-button:hover, .wd-button:focus {
   background: #2792C9;
+}
+
+.wd-button-white {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: #33A4D5;
+  border: 1px solid #33A4D5;
+  box-sizing: border-box;
+  border-radius: 3px;
+  background: #ffffff;
+}
+
+.wd-button-white:hover, .wd-button-white:focus {
+  background: #ffffff;
+  border: 1px solid #2792C9;
+  box-sizing: border-box;
+  border-radius: 3px;
+}
+
+.wd-100 {
+  width: 100%;
 }
 
 .home-slider-top {
@@ -5406,6 +5398,100 @@ body.page .main-navigation {
 
 .home-slider-top .items .item {
   border: 1px solid red;
+}
+
+.bread-crumbs-container ul {
+  list-style: none;
+  padding: 0;
+}
+
+.bread-crumbs-container ul li {
+  float: right;
+  margin-left: 10px;
+}
+
+.bread-crumbs-container ul li a {
+  color: #33A4D4;
+}
+
+.bread-crumbs-container ul li:last-child {
+  color: #949BA4;
+}
+
+.bread-crumbs-container ul li:before {
+  content: "/";
+}
+
+.bread-crumbs-container ul li:first-child:before {
+  content: "";
+}
+
+.contacts-info-container .contact-info {
+  border: 1px solid #33A4D5;
+  box-sizing: border-box;
+  margin-top: 150px;
+}
+
+.contacts-info-container .contact-info .image-bg {
+  background: #D6E1F0;
+  width: 500px;
+  height: 425px;
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+}
+
+.contacts-info-container .contact-info .image-bg2 {
+  background: url("./images/contact-info-bg.png") no-repeat bottom left;
+  width: 662px;
+  height: 550px;
+  position: absolute;
+  bottom: -23px;
+  left: -1px;
+}
+
+.contacts-info-container .contact-info .title1 {
+  font-family: "Montserrat Medium";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 18px;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: #3D4C68;
+  opacity: 0.7;
+  margin-bottom: 10px;
+}
+
+.contacts-info-container .contact-info .title2 {
+  font-family: "Montserrat Medium";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 26px;
+  line-height: 34px;
+  margin-bottom: 20px;
+}
+
+.contacts-info-container .contact-info .title3 {
+  font-family: "Gilroy-Medium";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 27px;
+  color: #3D4C68;
+  margin-bottom: 35px;
+}
+
+.contacts-info-container .contact-info .contact-info-wrapper {
+  padding-top: 69px;
+  padding-bottom: 69px;
+  padding-right: 101px;
+  font-family: "Gilroy-Medium";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 27px;
+  color: #3D4C68;
 }
 
 .home-nav-curses {
@@ -5485,7 +5571,7 @@ body.page .main-navigation {
 }
 
 .home-nav-curses .home-nav-curses-conteiner .items .item-container .item .image {
-  margin-top: -40px;
+  margin-top: -25px;
   margin-right: 40px;
 }
 
@@ -5917,7 +6003,7 @@ body.page .main-navigation {
   overflow: hidden;
 }
 
-.instagram-container .title-block .title {
+.instagram-container .title-block .title a {
   text-transform: uppercase;
   color: #33A4D5;
   font-style: normal;
@@ -5944,12 +6030,14 @@ body.page .main-navigation {
   font-weight: 600;
   font-size: 40px;
   line-height: 52px;
+  margin-bottom: 18px;
 }
 
 .what-is-learn-container .desc {
   color: #0A2555;
   font-size: 20px;
   line-height: 30px;
+  margin-bottom: 30px;
 }
 
 .what-is-learn-container .what-is-learn-image-container {
@@ -6009,11 +6097,16 @@ body.page .main-navigation {
   margin-left: 44px;
 }
 
+.stay-is-master-container .stay-is-master-items-container .item .item-image {
+  margin-bottom: 30px;
+}
+
 .stay-is-master-container .stay-is-master-items-container .item .item-title {
   font-weight: 600;
   font-size: 18px;
   line-height: 26px;
   color: #085F97;
+  margin-bottom: 10px;
 }
 
 .stay-is-master-container .stay-is-master-items-container .item .item-desc {
@@ -6022,6 +6115,7 @@ body.page .main-navigation {
   font-size: 18px;
   line-height: 26px;
   color: #3D4C68;
+  margin-bottom: 16px;
 }
 
 .history-success-container {
@@ -6064,6 +6158,30 @@ body.page .main-navigation {
   width: 950px;
   margin-top: 80px;
   margin-left: 50px;
+  position: relative;
+}
+
+.history-success-container .history-success-items-container .item .history-success-item-name {
+  position: absolute;
+  top: -60px;
+  right: 237px;
+  color: #ffffff;
+}
+
+.history-success-container .history-success-items-container .item .history-success-item-name .name {
+  font-family: "Gilroy-Medium";
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 26px;
+}
+
+.history-success-container .history-success-items-container .item .history-success-item-name .cat-name {
+  font-family: "Gilroy-Medium";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 26px;
 }
 
 .history-success-container .history-success-items-container .item .img-container {
@@ -6578,6 +6696,191 @@ body.page .main-navigation {
 
 .top-menu .block-2 .block-2-container .items .item.selected, .top-menu .block-2 .block-2-container .items .item:hover {
   color: #33A4D4;
+}
+
+.review-description-container .review-description {
+  font-family: "Gilroy-Medium";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 30px;
+  color: #3D4C68;
+  margin-bottom: 50px;
+}
+
+.review-description-container .items .item {
+  margin-bottom: 90px;
+}
+
+.review-description-container .items .item .info-name .info-name-image {
+  float: right;
+}
+
+.review-description-container .items .item .info-name .info-name-text {
+  float: right;
+  font-family: "Gilroy-Medium";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 22px;
+  color: #0A2555;
+  margin-top: 40px;
+  margin-right: 40px;
+}
+
+.review-description-container .items .item .info-text {
+  font-family: "Gilroy-Medium";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 26px;
+  color: #3D4C68;
+  margin-bottom: 20px;
+}
+
+.review-description-container .items .item .info-text-more {
+  font-family: "Gilroy-Medium";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 20px;
+  color: #33A4D5;
+}
+
+.portfolio-container {
+  margin-top: 30px;
+}
+
+.portfolio-container ul {
+  list-style: none;
+  padding: 0;
+}
+
+.portfolio-container ul li label, .portfolio-container ul li a {
+  font-family: "Montserrat Medium";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 30px;
+  color: #3D4C68;
+}
+
+.portfolio-container ul li.selected {
+  padding-right: 30px;
+  background: url("./images/menu-arrow-blue2.svg") no-repeat 100% 15%;
+}
+
+.portfolio-container ul li.selected a {
+  font-family: "Montserrat Medium";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 30px;
+  color: #085F97;
+}
+
+.portfolio-container .price-title {
+  font-family: "Gilroy-Medium";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 30px;
+  color: #085F97;
+}
+
+.portfolio-container .online-block {
+  color: #3D4C68;
+  position: relative;
+}
+
+.portfolio-container .online-block .online {
+  background: url(./images/switch-on.svg) no-repeat;
+  width: 44px;
+  height: 22px;
+  position: absolute;
+  top: 8px;
+}
+
+.portfolio-container .items {
+  margin-top: 100px;
+}
+
+.portfolio-container .items .item-container .item {
+  background: #FFFFFF;
+  border-radius: 3px;
+  box-shadow: 0px 5px 20px rgba(17, 33, 62, 0.15);
+  position: relative;
+}
+
+.portfolio-container .items .item-container .item:hover {
+  box-shadow: 0px 5px 50px rgba(8, 95, 151, 0.3);
+  width: 102%;
+  margin-right: -1%;
+  margin-left: 1%;
+}
+
+.portfolio-container .items .item-container .item .title-sub {
+  margin-top: 34px;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 26px;
+  color: #949BA4;
+}
+
+.portfolio-container .items .item-container .item .title-sub strong {
+  font-family: "Gilroy-Medium";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 17px;
+  line-height: 22px;
+  color: #085F97;
+}
+
+.portfolio-container .items .item-container .item .title {
+  margin-top: 10px;
+  font-family: "Montserrat Medium";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 26px;
+  line-height: 34px;
+  color: #085F97;
+}
+
+.portfolio-container .items .item-container .item .image {
+  margin-top: 10px;
+  margin-right: 40px;
+}
+
+.portfolio-container .items .item-container .item .image img {
+  width: 223px;
+}
+
+.portfolio-container .items .item-container .item .price-container {
+  margin-top: 20px;
+}
+
+.portfolio-container .items .item-container .item .price {
+  color: #0A2555;
+}
+
+.portfolio-container .items .item-container .item .price-before {
+  color: #33A4D5;
+  text-decoration-line: line-through;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 30px;
+}
+
+.portfolio-container .items .item-container .item .date {
+  font-family: "Gilroy-Medium";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 22px;
+  color: #D6E1F0;
+  margin-bottom: 20px;
 }
 
 /* Widgets */

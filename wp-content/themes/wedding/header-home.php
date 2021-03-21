@@ -92,21 +92,6 @@
 
             </div>
 
-<!--            <div class="home-slider-top">-->
-<!---->
-<!--                <div class="container">-->
-<!---->
-<!--                    <div class="items">-->
-<!--                        <div class="item">dfhdfghdfg</div>-->
-<!--                        <div class="item">dfhdfghdfg2</div>-->
-<!--                        <div class="item">dfhdfghdfg3</div>-->
-<!--                        <div class="item">dfhdfghdfg4</div>-->
-<!--                    </div>-->
-<!---->
-<!--                </div>-->
-<!---->
-<!--            </div>-->
-
         </div>
 
     </header><!-- #masthead -->

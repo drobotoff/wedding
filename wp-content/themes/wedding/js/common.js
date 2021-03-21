@@ -4,10 +4,12 @@
 
 (function($) {
 
+    $('.main-menu').first().append('<li id="menu-item-lang" class="menu-item"><a href="#">RU</a></li>');
+
     $('.owl-carousel').owlCarousel({
         loop:true,
         margin:10,
-        nav:true,
+        nav: true,
         // autoplay:true,
         // autoplayTimeout:5000,
         // autoplayHoverPause:true,

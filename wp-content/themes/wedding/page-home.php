@@ -15,30 +15,6 @@ get_header('home');
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main">
 
-<!--            <div class="curses-useful-container">-->
-<!---->
-<!--                <div class="container">-->
-<!---->
-<!--                    <div class="box">-->
-<!---->
-<!--                        <div class="title">-->
-<!--                            Для кого курсы будут полезны?!-->
-<!--                        </div>-->
-<!---->
-<!--                        <svg width="332" height="4" viewBox="0 0 332 4" fill="none" xmlns="http://www.w3.org/2000/svg">-->
-<!--                            <line x1="-4.37114e-08" y1="1.50002" x2="152" y2="1.5" stroke="#D6E1F0"/>-->
-<!--                            <circle cx="166" cy="2" r="1.5" fill="#D6E1F0" stroke="#D6E1F0"/>-->
-<!--                            <line x1="180" y1="1.5" x2="332" y2="1.49999" stroke="#D6E1F0"/>-->
-<!--                        </svg>-->
-<!---->
-<!--                        <div class="text">-->
-<!--                            Видео-курсы «Академии свадебного платья» — авторские мастер-классы, которые помогают всем желающим создавать свадебные платья класс люкс самостоятельно.-->
-<!--                        </div>-->
-<!--                    </div>-->
-<!--                </div>-->
-<!---->
-<!--            </div>-->
-
             <div class="type-curses-block-container">
 
                 <div class="container">
@@ -211,8 +187,8 @@ get_header('home');
 
                         <div class="button-container">
 
-                            <button class="wd-button">Все курсы</button>
-                            <button class="wd-button">Примеры работ</button>
+                            <button class="wd-button"><a href="/courses">Все курсы</a></button>
+                            <button class="wd-button-white"><a href="/portfolio">Примеры работ</a></button>
 
                         </div>
 
@@ -229,120 +205,158 @@ get_header('home');
                         <path fill-rule="evenodd" clip-rule="evenodd" d="M5.04074 0.750488C2.67489 0.750488 0.75 2.67563 0.75 5.04123V13.96C0.75 16.3259 2.67485 18.2505 5.04074 18.2505H13.9595C16.3254 18.2505 18.25 16.3259 18.25 13.96V5.04123C18.25 2.67561 16.3254 0.750488 13.9595 0.750488H5.04074ZM2.20895 5.04123C2.20895 3.47968 3.47926 2.20972 5.04074 2.20972H13.9595C15.521 2.20972 16.7913 3.47968 16.7913 5.04123V13.96C16.7913 15.5218 15.5211 16.7921 13.9595 16.7921H5.04074C3.47921 16.7921 2.20895 15.5218 2.20895 13.96V5.04123ZM14.2848 3.88024C13.8177 3.88024 13.4376 4.26043 13.4376 4.72691C13.4376 5.19372 13.8178 5.57387 14.2848 5.57387C14.7517 5.57387 15.1318 5.19383 15.1318 4.72691C15.1318 4.26033 14.7518 3.88024 14.2848 3.88024ZM9.49988 5.11475C7.0821 5.11475 5.11426 7.08233 5.11426 9.50037C5.11426 11.9184 7.08212 13.8863 9.49988 13.8863C11.9182 13.8863 13.8861 11.9184 13.8861 9.50037C13.8861 7.08262 11.9182 5.11475 9.49988 5.11475ZM6.57293 9.50037C6.57293 7.88658 7.88653 6.57397 9.49988 6.57397C11.1141 6.57397 12.4268 7.88663 12.4268 9.50037C12.4268 11.1146 11.1142 12.4279 9.49988 12.4279C7.88644 12.4279 6.57293 11.1146 6.57293 9.50037Z" fill="#33A4D5"/>
                     </svg>
 
-                    <span class="title">Trofimova.asp</span>
+                    <span class="title">
+                        <a href="https://www.instagram.com/TROFIMOVA.ASP/" target="_blank">
+                            Trofimova.asp
+                        </a>
+                    </span>
                 </div>
 
+                <div class="instagram-images-container owl-carousel">
 
-                <div class="instagram-images-container">
-
-                    <div style="width:179px; height: 179px; background: #000;">
-
+                    <div class="item">
+                        <img src="/wp-content/themes/wedding/images/instagram-img1.png">
                     </div>
 
-                    <div style="width:179px; height: 179px; background: #000;">
-
+                    <div class="item">
+                        <img src="/wp-content/themes/wedding/images/instagram-img2.png">
                     </div>
 
-                    <div style="width:179px; height: 179px; background: #000;">
-
+                    <div class="item">
+                        <img src="/wp-content/themes/wedding/images/instagram-img3.png">
                     </div>
 
-                    <div style="width:179px; height: 179px; background: #000;">
-
+                    <div class="item">
+                        <img src="/wp-content/themes/wedding/images/instagram-img4.png">
                     </div>
 
-                    <div style="width:179px; height: 179px; background: #000;">
-
+                    <div class="item">
+                        <img src="/wp-content/themes/wedding/images/instagram-img5.png">
                     </div>
 
-                    <div style="width:179px; height: 179px; background: #000;">
-
+                    <div class="item">
+                        <img src="/wp-content/themes/wedding/images/instagram-img6.png">
                     </div>
 
-                    <div style="width:179px; height: 179px; background: #000;">
-
+                    <div class="item">
+                        <img src="/wp-content/themes/wedding/images/instagram-img3.png">
                     </div>
 
-                    <div style="width:179px; height: 179px; background: #000;">
-
+                    <div class="item">
+                        <img src="/wp-content/themes/wedding/images/instagram-img1.png">
                     </div>
 
-                    <div style="width:179px; height: 179px; background: #000;">
-
+                    <div class="item">
+                        <img src="/wp-content/themes/wedding/images/instagram-img2.png">
                     </div>
 
                 </div>
-
 
             </div>
 
-            <div class="what-is-learn-container container">
+            <div class="what-is-learn-container">
 
-                <div class="title">Чему вы научитесь</div>
+                <div class="container">
 
-                <div class="desc">Примеры работ мастеров академии</div>
+                    <div class="title">Чему вы научитесь</div>
 
-                <div class="what-is-learn-image-container">
+                    <div class="desc">Примеры работ мастеров академии</div>
 
-                    <div style="width:460px; height: 258px; background: #000;">
+                    <div class="what-is-learn-image-container owl-carousel">
 
-                    </div>
+                        <div class="item">
+                            <img src="/wp-content/themes/wedding/images/learn-img1.png"/>
+                        </div>
 
-                    <div style="width:460px; height: 258px; background: #000;">
+                        <div class="item">
+                            <img src="/wp-content/themes/wedding/images/learn-img2.png"/>
+                        </div>
 
-                    </div>
+                        <div class="item">
+                            <img src="/wp-content/themes/wedding/images/learn-img1.png"/>
+                        </div>
 
-                    <div style="width:460px; height: 258px; background: #000;">
+                        <div class="item">
+                            <img src="/wp-content/themes/wedding/images/learn-img2.png"/>
+                        </div>
 
-                    </div>
+                        <div class="item">
+                            <img src="/wp-content/themes/wedding/images/learn-img1.png"/>
+                        </div>
 
-                    <div style="width:460px; height: 258px; background: #000;">
-
-                    </div>
-
-                    <div style="width:460px; height: 258px; background: #000;">
-
-                    </div>
-
-                    <div style="width:460px; height: 258px; background: #000;">
+                        <div class="item">
+                            <img src="/wp-content/themes/wedding/images/learn-img2.png"/>
+                        </div>
 
                     </div>
 
                 </div>
 
-                <div class="what-is-learn-image-nav-container">
+<!--                <div class="what-is-learn-image-nav-container">-->
+<!---->
+<!--                    <div class="item">-->
+<!--                        <svg width="3" height="3" viewBox="0 0 3 3" fill="none" xmlns="http://www.w3.org/2000/svg">-->
+<!--                            <circle cx="1.5" cy="1.50049" r="1.5" transform="rotate(-90 1.5 1.50049)" fill="#3D4C68"/>-->
+<!--                        </svg>-->
+<!--                    </div>-->
+<!---->
+<!--                    <div class="item selected">-->
+<!--                        <svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">-->
+<!--                            <circle cx="6.5" cy="6.50049" r="1.5" transform="rotate(-90 6.5 6.50049)" fill="#3D4C68"/>-->
+<!--                            <circle cx="6.5" cy="6.50049" r="6" transform="rotate(-90 6.5 6.50049)" stroke="#085F97"/>-->
+<!--                        </svg>-->
+<!--                    </div>-->
+<!---->
+<!---->
+<!--                    <div class="item">-->
+<!--                        <svg width="3" height="3" viewBox="0 0 3 3" fill="none" xmlns="http://www.w3.org/2000/svg">-->
+<!--                            <circle cx="1.5" cy="1.50049" r="1.5" transform="rotate(-90 1.5 1.50049)" fill="#3D4C68"/>-->
+<!--                        </svg>-->
+<!--                    </div>-->
+<!---->
+<!---->
+<!--                    <div class="item">-->
+<!--                        <svg width="3" height="3" viewBox="0 0 3 3" fill="none" xmlns="http://www.w3.org/2000/svg">-->
+<!--                            <circle cx="1.5" cy="1.50049" r="1.5" transform="rotate(-90 1.5 1.50049)" fill="#3D4C68"/>-->
+<!--                        </svg>-->
+<!--                    </div>-->
+<!---->
+<!--                    <div class="item">-->
+<!--                        <svg width="3" height="3" viewBox="0 0 3 3" fill="none" xmlns="http://www.w3.org/2000/svg">-->
+<!--                            <circle cx="1.5" cy="1.50049" r="1.5" transform="rotate(-90 1.5 1.50049)" fill="#3D4C68"/>-->
+<!--                        </svg>-->
+<!--                    </div>-->
+<!---->
+<!--                </div>-->
+
+            </div>
+
+            <div class="container">
+
+                <div class="what-is-learn-image-container owl-carousel">
 
                     <div class="item">
-                        <svg width="3" height="3" viewBox="0 0 3 3" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <circle cx="1.5" cy="1.50049" r="1.5" transform="rotate(-90 1.5 1.50049)" fill="#3D4C68"/>
-                        </svg>
-                    </div>
-
-                    <div class="item selected">
-                        <svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <circle cx="6.5" cy="6.50049" r="1.5" transform="rotate(-90 6.5 6.50049)" fill="#3D4C68"/>
-                            <circle cx="6.5" cy="6.50049" r="6" transform="rotate(-90 6.5 6.50049)" stroke="#085F97"/>
-                        </svg>
-                    </div>
-
-
-                    <div class="item">
-                        <svg width="3" height="3" viewBox="0 0 3 3" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <circle cx="1.5" cy="1.50049" r="1.5" transform="rotate(-90 1.5 1.50049)" fill="#3D4C68"/>
-                        </svg>
-                    </div>
-
-
-                    <div class="item">
-                        <svg width="3" height="3" viewBox="0 0 3 3" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <circle cx="1.5" cy="1.50049" r="1.5" transform="rotate(-90 1.5 1.50049)" fill="#3D4C68"/>
-                        </svg>
+                        <img src="/wp-content/themes/wedding/images/learn-img3.png"/>
                     </div>
 
                     <div class="item">
-                        <svg width="3" height="3" viewBox="0 0 3 3" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <circle cx="1.5" cy="1.50049" r="1.5" transform="rotate(-90 1.5 1.50049)" fill="#3D4C68"/>
-                        </svg>
+                        <img src="/wp-content/themes/wedding/images/learn-img5.png"/>
+                    </div>
+
+                    <div class="item">
+                        <img src="/wp-content/themes/wedding/images/learn-img3.png"/>
+                    </div>
+
+                    <div class="item">
+                        <img src="/wp-content/themes/wedding/images/learn-img5.png"/>
+                    </div>
+
+                    <div class="item">
+                        <img src="/wp-content/themes/wedding/images/learn-img3.png"/>
+                    </div>
+
+                    <div class="item">
+                        <img src="/wp-content/themes/wedding/images/learn-img5.png"/>
                     </div>
 
                 </div>
@@ -415,8 +429,8 @@ get_header('home');
 
                     <div class="item">
 
-                        <div>
-                            <div style="width:150px; height: 150px; background: #000;"></div>
+                        <div class="item-image">
+                            <img src="/wp-content/themes/wedding/images/stay-is-master-img1.png"/>
                         </div>
 
                         <div class="item-title">Поддержка студентов в закрытом чате</div>
@@ -428,8 +442,8 @@ get_header('home');
 
                     <div class="item">
 
-                        <div>
-                            <div style="width:150px; height: 150px; background: #000;"></div>
+                        <div class="item-image">
+                            <img src="/wp-content/themes/wedding/images/stay-is-master-img2.png"/>
                         </div>
 
                         <div class="item-title">Поддержка студентов в закрытом чате</div>
@@ -441,11 +455,12 @@ get_header('home');
 
                     <div class="item">
 
-                        <div>
-                            <div style="width:150px; height: 150px; background: #000;"></div>
+                        <div class="item-image">
+                            <img src="/wp-content/themes/wedding/images/stay-is-master-img1.png"/>
                         </div>
 
                         <div class="item-title">Поддержка студентов в закрытом чате</div>
+
                         <div class="item-desc">Консультация студентов по
                             любому вопросу в специальном
                             закрытом чате</div>
@@ -472,41 +487,10 @@ get_header('home');
 
                         <div class="item">
 
-                            <div class="img-container">
-
-                                <div class="grid">
-
-                                    <div class="grid__col-3">
-                                        <img class="img" src="/wp-content/themes/wedding/images/image2.png" alt="">
-                                        <div class="img-info">
-                                            <div class="instagram-info">
-                                                <svg width="19" height="20" viewBox="0 0 19 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M13.9595 0.999512H5.04074C2.5368 0.999512 0.5 3.0366 0.5 5.54025V14.459C0.5 16.963 2.5368 18.9995 5.04074 18.9995H13.9595C16.4635 18.9995 18.5 16.963 18.5 14.459V5.54025C18.5 3.0366 16.4635 0.999512 13.9595 0.999512ZM16.5413 14.459C16.5413 15.8828 15.383 17.0411 13.9595 17.0411H5.04074C3.6173 17.0411 2.45895 15.8828 2.45895 14.459V5.54025C2.45895 4.11681 3.6173 2.95874 5.04074 2.95874H13.9595C15.383 2.95874 16.5413 4.11681 16.5413 5.54025V14.459ZM14.2848 6.32289C13.6798 6.32289 13.1876 5.83092 13.1876 5.22594C13.1876 4.62123 13.6798 4.12926 14.2848 4.12926C14.8898 4.12926 15.3818 4.62123 15.3818 5.22594C15.3818 5.83092 14.8898 6.32289 14.2848 6.32289ZM4.86426 9.99939C4.86426 7.44327 6.94403 5.36377 9.49988 5.36377C12.0563 5.36377 14.1361 7.44355 14.1361 9.99939C14.1361 12.5555 12.0563 14.6353 9.49988 14.6353C6.94403 14.6353 4.86426 12.5555 4.86426 9.99939ZM6.82293 9.99939C6.82293 11.4756 8.02453 12.6769 9.49988 12.6769C10.9761 12.6769 12.1768 11.4756 12.1768 9.99939C12.1768 8.52376 10.9761 7.323 9.49988 7.323C8.02453 7.323 6.82293 8.52376 6.82293 9.99939Z" fill="#33A4D5" stroke="white" stroke-width="0.5"/>
-                                                </svg>
-                                                tat_youshina
-                                            </div>
-                                            <div class="youtube-info">
-                                                <svg width="19" height="20" viewBox="0 0 19 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                    <path d="M9.50319 1.00146C5.90206 1.00094 2.64744 3.14748 1.23005 6.45793L1.11787 6.49512L1.16136 6.62559C-0.70485 11.2284 1.51353 16.4725 6.11629 18.3387C7.19131 18.7746 8.34048 18.9984 9.50052 18.9977C14.47 18.9985 18.4992 14.9705 18.5 10.0009C18.5007 5.03142 14.4727 1.00218 9.50319 1.00146ZM16.5612 14.5363L16.0991 14.0745V12.999C16.0997 12.9525 16.0894 12.9067 16.0692 12.8649L14.8994 10.5287V9.39971C14.8994 9.29946 14.8493 9.2058 14.7659 9.15017L13.8661 8.55029C13.7956 8.5032 13.7084 8.48817 13.6262 8.5089L12.5242 8.78424L10.6733 7.99001L10.4186 6.20598L11.1244 5.50053H12.6394L13.1493 6.26687C13.1953 6.33578 13.2679 6.38261 13.3496 6.39614L15.1492 6.69608C15.1975 6.70418 15.2469 6.70024 15.2932 6.68468L16.9507 6.13219C18.3408 8.79995 18.1922 12.0086 16.5612 14.5363ZM15.3241 3.95705L14.8364 4.28218L13.4768 4.01014L12.5947 3.7165C12.5407 3.69817 12.4826 3.69584 12.4273 3.7099L11.3121 3.98854L10.8232 3.82568L11.1856 3.10103H12.2C12.2465 3.10106 12.2924 3.0903 12.334 3.06953L13.3718 2.55064C14.0865 2.92369 14.744 3.39729 15.3241 3.95705ZM6.21531 2.2711L6.93516 2.751C6.97055 2.77455 7.01052 2.79029 7.05243 2.79719L8.50593 3.03954L8.36406 3.46395L7.60672 3.7168C7.5389 3.73937 7.48135 3.78541 7.44445 3.84667L6.58303 5.28217L5.19942 6.1124L3.15985 6.40364C3.01201 6.42452 2.90209 6.55098 2.9019 6.70028V7.60009C2.9019 7.67965 2.93354 7.75591 2.98978 7.81215L3.50177 8.32414V8.83943L2.25403 8.0074L1.80143 6.64959C2.66255 4.682 4.24086 3.11632 6.21531 2.2711ZM5.36139 12.1052L4.00567 11.8337L3.50177 10.8286V10.1238L4.61934 9.0062L5.03296 9.83372C5.08376 9.9354 5.18772 9.99963 5.3014 9.99959H7.2312L8.04373 11.3538C8.09794 11.4441 8.1955 11.4992 8.30077 11.4993H9.1346L8.92464 12.5512L7.78908 13.6867C7.73273 13.7429 7.70101 13.8192 7.7009 13.8988V14.6486L6.62112 15.4585C6.54562 15.5151 6.50115 15.604 6.50115 15.6984V16.7818L6.12803 16.6582L5.60134 15.3409V12.3991C5.60137 12.2565 5.50105 12.1336 5.36139 12.1052ZM4.45977 16.716C1.63178 14.5943 0.435813 10.9285 1.4685 7.5473L1.71775 8.29474C1.73874 8.35799 1.78021 8.41247 1.83562 8.44951L3.33081 9.4462L2.98978 9.78753C2.93354 9.84377 2.9019 9.92003 2.9019 9.99959V10.8994C2.90186 10.9459 2.91262 10.9918 2.93339 11.0335L3.53327 12.2332C3.57481 12.3161 3.65231 12.3751 3.74322 12.3931L5.00296 12.6447V15.3985C5.00292 15.4366 5.01016 15.4743 5.02426 15.5097L5.62413 17.0094C5.65697 17.0913 5.72424 17.1547 5.80799 17.1825L6.70781 17.4824C6.73787 17.4926 6.76937 17.4979 6.80109 17.498C6.96673 17.498 7.10102 17.3637 7.10102 17.1981V15.8484L8.1808 15.0385C8.25631 14.9819 8.30077 14.893 8.30077 14.7986V14.023L9.41264 12.9111C9.45445 12.8692 9.48294 12.8159 9.49453 12.7578L9.79446 11.2581C9.82693 11.0957 9.72158 10.9377 9.55912 10.9052C9.53982 10.9014 9.52021 10.8994 9.50052 10.8994H8.47054L7.65801 9.54518C7.60379 9.45494 7.50624 9.39975 7.40096 9.39971H5.48676L4.97147 8.36583C4.92831 8.27952 4.84628 8.21924 4.75101 8.20386C4.65578 8.1874 4.55857 8.21882 4.49097 8.28785L4.10165 8.67567V8.19996C4.10165 8.12041 4.07001 8.04415 4.01377 7.98791L3.50177 7.47592V6.96032L5.34399 6.69728C5.38354 6.69154 5.4216 6.67797 5.45587 6.65739L6.95555 5.75757C6.99762 5.7323 7.03286 5.69706 7.05813 5.65499L7.90096 4.25039L8.69549 3.98524C8.78521 3.95581 8.85562 3.88544 8.88505 3.79568L9.18499 2.89587C9.23695 2.73859 9.15158 2.56894 8.9943 2.51697C8.9798 2.51217 8.96491 2.5085 8.94984 2.50595L7.2138 2.21651L6.90876 2.01315C8.79623 1.39881 10.8405 1.47484 12.6772 2.22761L12.1292 2.50115H11.0002C10.886 2.50051 10.7813 2.56485 10.7303 2.66702L10.1304 3.86677C10.0565 4.01501 10.1167 4.19512 10.265 4.26902C10.2776 4.27532 10.2907 4.28072 10.3041 4.28518L11.2039 4.58512C11.2579 4.60345 11.316 4.60578 11.3712 4.59172L12.4864 4.31307L13.3034 4.58512C13.3151 4.58932 13.3272 4.59254 13.3394 4.59472L14.8391 4.89465C14.9171 4.91055 14.9982 4.89458 15.0644 4.85026L15.747 4.39496C16.083 4.76917 16.3849 5.17258 16.6492 5.60041L15.1735 6.0923L13.5758 5.82596L13.0479 5.03412C12.9925 4.95115 12.8996 4.90114 12.7998 4.90065H11.0002C10.9207 4.90065 10.8444 4.9323 10.7882 4.98853L9.88834 5.88835C9.82153 5.95512 9.79008 6.04949 9.80346 6.14299L10.1034 8.24256C10.1185 8.34637 10.1867 8.43474 10.2834 8.47561L12.3829 9.37542C12.4431 9.40148 12.5102 9.40684 12.5737 9.39072L13.6448 9.12287L14.2995 9.56018V10.5995C14.299 10.6459 14.3093 10.6918 14.3295 10.7335L15.4993 13.0697V14.1987C15.4993 14.2783 15.5309 14.3545 15.5872 14.4108L16.2146 15.0385C13.4318 18.7478 8.16899 19.4988 4.45977 16.716Z" fill="#33A4D5" stroke="#33A4D5" stroke-width="0.5"/>
-                                                </svg>
-                                                youshina.ru
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="grid__col-9 item-desc">
-                                        <p>О Юлии я узнала  совсем недавно, но уже успела с ней скорефаниться и посотрудничать о юльке я узнала  совсем недавно, но уже успела с ней скорефаниться и посотрудничать о юльке я узнала  совсем недавно, но уже успела с ней скорефаниться и посотрудничать о юльке я узнала  совсем недавно, но уже успела с ней скорефаниться и посотрудничать...</p>
-
-                                        <a class="item-desc-more" href="javascript:void(0)">Показать весь отзыв</a>
-                                    </div>
-
-                                </div>
-
+                            <div class="history-success-item-name">
+                                <div class="name">Юлия блаблабла | 35 лет, Москва</div>
+                                <div class="cat-name">Мастер высшей категории</div>
                             </div>
-
-                        </div>
-
-                        <div class="item">
 
                             <div class="img-container">
 
@@ -624,7 +608,9 @@ get_header('home');
                                 <div id="answer-1" class="answer-item">
                                     <div class="sign1"></div>
 
-                                    <div class="answer-title">Вы даете готовые лекала? 1</div>
+                                    <div class="answer-title">
+                                        Для меня шитье и рукоделие  любимые хобби. Подойдут ли мне ваши курсы?
+                                    </div>
 
                                     <div class="answer-text">
                                         В нашей академии мы учим каждого студента, независимо от уровня мастерства конструировать. Это намного проще и быстрее, чем делать градацию готовых лекал и подгонять под нужный размер. В каждом курсе автор знакомить вас со своей уникальной сичтемой конструирования “Мерка - Чертеж” для разных видов изделий. Система конструирования очень проста. Никаких сложных формул и расчетов. Ее может освоить даже школник. Всреднем на построение лекала тратися не более 10-15 мин.
@@ -636,7 +622,9 @@ get_header('home');
 
                                     <div class="sign1"></div>
 
-                                    <div class="answer-title">Вы даете готовые лекала? 2</div>
+                                    <div class="answer-title">
+                                        На сколько месяцев мне дается доступ для просмотра курсов?
+                                    </div>
 
                                     <div class="answer-text">
                                         В нашей академии мы учим каждого студента, независимо от уровня мастерства конструировать. Это намного проще и быстрее, чем делать градацию готовых лекал и подгонять под нужный размер. В каждом курсе автор знакомить вас со своей уникальной сичтемой конструирования “Мерка - Чертеж” для разных видов изделий. Система конструирования очень проста. Никаких сложных формул и расчетов. Ее может освоить даже школник. Всреднем на построение лекала тратися не более 10-15 мин.
@@ -648,7 +636,7 @@ get_header('home');
 
                                     <div class="sign1"></div>
 
-                                    <div class="answer-title">Вы даете готовые лекала? 3</div>
+                                    <div class="answer-title">Вы даете готовые лекала?</div>
 
                                     <div class="answer-text">
                                         В нашей академии мы учим каждого студента, независимо от уровня мастерства конструировать. Это намного проще и быстрее, чем делать градацию готовых лекал и подгонять под нужный размер. В каждом курсе автор знакомить вас со своей уникальной сичтемой конструирования “Мерка - Чертеж” для разных видов изделий. Система конструирования очень проста. Никаких сложных формул и расчетов. Ее может освоить даже школник. Всреднем на построение лекала тратися не более 10-15 мин.

@@ -16,9 +16,6 @@ get_header();
 		<main id="main" class="site-main">
 
 			<?php
-
-            echo "Page";
-
 			// Start the Loop.
 			while ( have_posts() ) :
 				the_post();

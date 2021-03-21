@@ -5,19 +5,47 @@
 }
 
 .wd-button {
+
   background: #33A4D5;
   border-radius: 3px;
   font-style: normal;
   font-weight: 500;
   font-size: 14px;
-  //line-height: 54px;
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: #ffffff;
 
+  a {
+    color: #ffffff;
+  }
+
   &:hover, &:focus {
     background: #2792C9;
   }
+}
+
+.wd-button-white{
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: #33A4D5;
+  border: 1px solid #33A4D5;
+  box-sizing: border-box;
+  border-radius: 3px;
+  background: #ffffff;
+
+  &:hover, &:focus {
+    background: #ffffff;
+    border: 1px solid #2792C9;
+    box-sizing: border-box;
+    border-radius: 3px;
+  }
+}
+
+.wd-100 {
+  width: 100%;
 }
 
 .home-slider-top {
@@ -27,6 +55,102 @@
   .items {
     .item {
       border: 1px solid red;
+    }
+  }
+}
+
+.bread-crumbs-container {
+  ul {
+    list-style: none;
+    padding: 0;
+    li {
+      float: left;
+      margin-right: 10px;
+      a {
+        color: #33A4D4;
+      }
+      &:last-child {
+        color: #949BA4;
+      }
+      &:before {
+        content: "/"
+      }
+      &:first-child {
+        &:before {
+          content: ""
+        }
+      }
+    }
+  }
+}
+
+.contacts-info-container {
+
+  .contact-info {
+
+    border: 1px solid #33A4D5;
+    box-sizing: border-box;
+    margin-top: 150px;
+
+    .image-bg{
+      background: #D6E1F0;
+      width: 500px;
+      height: 425px;
+      position: absolute;
+      bottom: 20px;
+      right: 20px;
+    }
+
+    .image-bg2 {
+      background: url('./images/contact-info-bg.png') no-repeat bottom right;
+      width: 662px;
+      height: 550px;
+      position: absolute;
+      bottom: -23px;
+      right: -1px;
+    }
+
+    .title1 {
+      font-family: "Montserrat Medium";
+      font-style: normal;
+      font-weight: 500;
+      font-size: 13px;
+      line-height: 18px;
+      letter-spacing: 0.02em;
+      text-transform: uppercase;
+      color: #3D4C68;
+      opacity: 0.7;
+      margin-bottom: 10px;
+    }
+
+    .title2 {
+      font-family: "Montserrat Medium";
+      font-style: normal;
+      font-weight: 600;
+      font-size: 26px;
+      line-height: 34px;
+      margin-bottom: 20px;
+    }
+
+    .title3 {
+      font-family: "Gilroy-Medium";
+      font-style: normal;
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 27px;
+      color: #3D4C68;
+      margin-bottom: 35px;
+    }
+    .contact-info-wrapper {
+      padding-top: 69px;
+      padding-bottom: 69px;
+      padding-left:101px;
+      font-family: "Gilroy-Medium";
+      font-style: normal;
+      font-weight: normal;
+      font-size: 18px;
+      line-height: 27px;
+      color: #3D4C68;
     }
   }
 }
@@ -470,12 +594,14 @@
 
   .title-block {
     .title {
-      text-transform: uppercase;
-      color: #33A4D5;
-      font-style: normal;
-      font-weight: 500;
-      font-size: 18px;
-      line-height: 26px;
+      a {
+        text-transform: uppercase;
+        color: #33A4D5;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 26px;
+      }
     }
   }
 
@@ -500,12 +626,14 @@
     font-weight: 600;
     font-size: 40px;
     line-height: 52px;
+    margin-bottom: 18px;
   }
 
   .desc {
     color: #0A2555;
     font-size: 20px;
     line-height: 30px;
+    margin-bottom: 30px;
   }
 
   .what-is-learn-image-container {
@@ -571,11 +699,16 @@
       width: 300px;
       margin-right: 44px;
 
+      .item-image {
+        margin-bottom: 30px;
+      }
+
       .item-title {
         font-weight: 600;
         font-size: 18px;
         line-height: 26px;
         color: #085F97;
+        margin-bottom: 10px;
       }
 
       .item-desc {
@@ -584,6 +717,7 @@
         font-size: 18px;
         line-height: 26px;
         color: #3D4C68;
+        margin-bottom: 16px;
       }
 
     }
@@ -636,6 +770,30 @@
       width: 950px;
       margin-top: 80px;
       margin-right: 50px;
+      position: relative;
+
+      .history-success-item-name {
+
+        position: absolute;
+        top: -60px;
+        left: 237px;
+        color: #ffffff;
+
+        .name {
+          font-family: "Gilroy-Medium";
+          font-style: normal;
+          font-weight: bold;
+          font-size: 18px;
+          line-height: 26px;
+        }
+        .cat-name {
+          font-family: "Gilroy-Medium";
+          font-style: normal;
+          font-weight: normal;
+          font-size: 15px;
+          line-height: 26px;
+        }
+      }
 
       .img-container {
 
@@ -1022,7 +1180,6 @@
     }
 
   }
-
 }
 
 // Все курсы меню
@@ -1185,6 +1342,229 @@
           &.selected, &:hover {
             color: #33A4D4;
           }
+        }
+      }
+    }
+  }
+
+}
+
+.review-description-container{
+
+  .review-description {
+    font-family: "Gilroy-Medium";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 30px;
+    color: #3D4C68;
+    margin-bottom: 50px;
+  }
+
+  .items{
+
+    .item {
+
+      margin-bottom: 90px;
+
+      .info-name {
+
+          .info-name-image {
+            float: left;
+          }
+
+          .info-name-text {
+            float: left;
+            font-family: "Gilroy-Medium";
+            font-style: normal;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 22px;
+            color: #0A2555;
+            margin-top: 40px;
+            margin-left: 40px;
+          }
+      }
+
+      .info-text {
+        font-family: "Gilroy-Medium";
+        font-style: normal;
+        font-weight: normal;
+        font-size: 18px;
+        line-height: 26px;
+        color: #3D4C68;
+        margin-bottom: 20px;
+      }
+
+      .info-text-more {
+        font-family: "Gilroy-Medium";
+        font-style: normal;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 20px;
+        color: #33A4D5;
+      }
+    }
+  }
+
+}
+
+.portfolio-container {
+
+  margin-top: 30px;
+
+  ul {
+    list-style: none;
+    padding: 0;
+    li {
+      label, a {
+        font-family: "Montserrat Medium";
+        font-style: normal;
+        font-weight: normal;
+        font-size: 20px;
+        line-height: 30px;
+        color: #3D4C68;
+      }
+      &.selected {
+        padding-left: 30px;
+        background: url('./images/menu-arrow-blue2.svg') no-repeat 0% 15%;
+        a {
+          font-family: "Montserrat Medium";
+          font-style: normal;
+          font-weight: 600;
+          font-size: 20px;
+          line-height: 30px;
+          color: #085F97;
+        }
+      }
+    }
+  }
+
+  .price-title {
+    font-family: "Gilroy-Medium";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 30px;
+    color: #085F97;
+  }
+
+  .online-block {
+
+    color: #3D4C68;
+    position: relative;
+
+    .online {
+      background: url(./images/switch-on.svg) no-repeat;
+      width: 44px;
+      height: 22px;
+      position: absolute;
+      top: 8px;
+    }
+  }
+
+  .items {
+
+    margin-top: 100px;
+
+    .item-container {
+
+      .item {
+
+        //border: 1px solid #09758E;
+        background: #FFFFFF;
+        border-radius: 3px;
+        box-shadow: 0px 5px 20px rgba(17, 33, 62, 0.15);
+        position: relative;
+        margin-bottom: 30px;
+
+        &:hover {
+          box-shadow: 0px 5px 50px rgba(8, 95, 151, 0.3);
+          width: 102%;
+          margin-left: -1%;
+          margin-right: 1%;
+        }
+
+        //&:before {
+        //  background: url(./images/corner-top-left.svg) no-repeat;
+        //  top: 20px;
+        //  left: 20px;
+        //  position: absolute;
+        //  content: "";
+        //  width: 269px;
+        //  height: 204px;
+        //}
+        //
+        //&:after {
+        //  background: url(./images/corner-bottom-right.svg) no-repeat;
+        //  bottom: 20px;
+        //  right: 20px;
+        //  position: absolute;
+        //  content: "";
+        //  width: 269px;
+        //  height: 204px;
+        //}
+
+        .title-sub {
+          margin-top: 34px;
+          font-style: normal;
+          font-weight: normal;
+          font-size: 18px;
+          line-height: 26px;
+          color: #949BA4;
+          strong {
+            font-family: "Gilroy-Medium";
+            font-style: normal;
+            font-weight: 600;
+            font-size: 17px;
+            line-height: 22px;
+            color: #085F97;
+          }
+        }
+
+        .title {
+          margin-top: 10px;
+          font-family: "Montserrat Medium";
+          font-style: normal;
+          font-weight: 500;
+          font-size: 26px;
+          line-height: 34px;
+          color: #085F97;
+        }
+
+        .image {
+          margin-top: 10px;
+          margin-left: 40px;
+          img {
+            width: 223px;
+          }
+        }
+
+        .price-container{
+          margin-top: 20px;
+        }
+
+        .price {
+          color: #0A2555;
+        }
+
+        .price-before {
+          color: #33A4D5;
+          text-decoration-line: line-through;
+          font-style: normal;
+          font-weight: 500;
+          font-size: 18px;
+          line-height: 30px;
+        }
+
+        .date {
+          font-family: "Gilroy-Medium";
+          font-style: normal;
+          font-weight: normal;
+          font-size: 16px;
+          line-height: 22px;
+          color: #D6E1F0;
+          margin-bottom: 20px;
         }
       }
     }
