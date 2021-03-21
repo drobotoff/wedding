@@ -8,9 +8,7 @@
  */
 ?>
 
-<div class="top-menu-bg">
-
-</div>
+<div class="top-menu-bg"></div>
 
 <div class="top-menu">
 
