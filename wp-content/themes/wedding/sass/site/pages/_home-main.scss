@@ -1192,3 +1192,147 @@
 
 }
 
+//----- promo countdown
+.promo-wrap {
+  color: #fff;
+  padding: 40px 15px 60px;
+  text-align: center;
+  font-family: "Montserrat Medium";
+  background: url('./images/promo-bg.png') no-repeat fixed center center;
+
+  .description-container {
+    .h-del {
+      top: -15px;
+    }
+  }
+  .title {
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 32px;
+    display: block;
+    margin: 0 25px;
+  }
+  .description {
+    display: none;
+    font-family: "Gilroy-Medium";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+  }
+  .price-container {
+    .price-before {
+      text-decoration-line: line-through;
+      font-size: 26px;
+    }
+    .price {
+      font-size: 36px;
+    }
+  }
+  .countdown {
+    .timer {
+      text-align: center;
+      font-weight: 600;
+      font-size: 24px;
+      div {
+        &:first-child {
+          margin-left: 0;
+        }
+        &:last-child {
+          margin-right: 0;
+        }
+        display: inline-block;
+        vertical-align: middle;
+        border: 1px solid #fff;
+        width: 60px;
+        height: 90px;
+        margin: 15px 12px;
+        line-height: 90px;
+      }
+    }
+    .ends-in {
+      font-size: 18px;
+      line-height: 26px;
+    }
+  }
+  .buy {
+    &:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+    width: 100%;
+    margin: 30px 0 0;
+  }
+}
+
+@include media(tablet) {
+  .promo-wrap {
+    position: relative;
+    text-align: left;
+    min-height: 300px;
+    padding: 35px 45px;
+    .description-container {
+      display: inline-block;
+      width: 52%;
+    }
+    .title {
+      margin: 0;
+    }
+    .description {
+      display: block;
+      margin: 10px 0 0;
+    }
+    .right-container {
+      margin: 0 65px 0 0;
+      float: right;
+    }
+    .buy {
+      width: 212px;
+      margin: 15px 0 0;
+      float: left;
+    }
+  }
+}
+
+@include media(desktop) {
+  .promo-wrap {
+    min-height: 400px;
+    padding: 60px 145px;
+    .description-container {
+      .h-del {
+        top: -5px;
+      }
+    }
+    .title {
+      font-size: 34px;
+      line-height: 48px;
+    }
+    .description {
+      font-size: 20px;
+      line-height: 32px;
+    }
+    .price-container {
+      .price-before {
+        font-size: 32px;
+      }
+      .price {
+        font-size: 48px;
+      }
+    }
+    .countdown {
+      .timer {
+        font-size: 40px;
+        div {
+          width: 80px;
+          height: 120px;
+          margin: 15px 17px;
+          line-height: 120px;
+        }
+      }
+      .ends-in {
+        font-size: 25px;
+      }
+    }
+  }
+}
