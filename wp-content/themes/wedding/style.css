@@ -6005,7 +6005,7 @@ body.page .main-navigation {
   overflow: hidden;
 }
 
-.instagram-container .title-block .title {
+.instagram-container .title-block .title a {
   text-transform: uppercase;
   color: #33A4D5;
   font-style: normal;

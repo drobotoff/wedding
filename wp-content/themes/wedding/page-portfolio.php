@@ -9,12 +9,11 @@
  * @since Wedding 1.0
  */
 
-get_header('course');
+get_header();
 ?>
 
-	<div id="primary" class="content-area">
-		<main id="main" class="site-main">
-
+    <div id="primary" class="content-area">
+        <main id="main" class="site-main">
 
             <div class="bread-crumbs-container">
 
@@ -25,7 +24,7 @@ get_header('course');
                             <a href="/">Главная</a>
                         </li>
                         <li>
-                            Каталог видеокурсов
+                            Портфолио
                         </li>
                     </ul>
                     <div style="clear: both;"></div>
@@ -36,12 +35,17 @@ get_header('course');
 
             <header class="entry-header">
                 <div class="container">
-                    <h1 class="entry-title">Каталог видеокурсов</h1>
+                    <h1 class="entry-title">Портфолио</h1>
                 </div>
             </header>
 
-		</main><!-- #main -->
-	</div><!-- #primary -->
+
+
+
+    </div>
+
+    </main><!-- #main -->
+    </div><!-- #primary -->
 
 <?php
 get_footer();

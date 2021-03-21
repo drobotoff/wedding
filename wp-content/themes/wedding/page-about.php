@@ -69,7 +69,7 @@ get_header();
                         <div class="button-container">
 
                             <button class="wd-button">Все курсы</button>
-                            <button class="wd-button">Примеры работ</button>
+                            <button class="wd-button-white">Примеры работ</button>
 
                         </div>
 

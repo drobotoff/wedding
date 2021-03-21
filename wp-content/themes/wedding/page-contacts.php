@@ -103,6 +103,61 @@ get_header();
 
             </div>
 
+            <div class="instagram-container container">
+
+                <div class="title-block">
+                    <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M5.04074 0.750488C2.67489 0.750488 0.75 2.67563 0.75 5.04123V13.96C0.75 16.3259 2.67485 18.2505 5.04074 18.2505H13.9595C16.3254 18.2505 18.25 16.3259 18.25 13.96V5.04123C18.25 2.67561 16.3254 0.750488 13.9595 0.750488H5.04074ZM2.20895 5.04123C2.20895 3.47968 3.47926 2.20972 5.04074 2.20972H13.9595C15.521 2.20972 16.7913 3.47968 16.7913 5.04123V13.96C16.7913 15.5218 15.5211 16.7921 13.9595 16.7921H5.04074C3.47921 16.7921 2.20895 15.5218 2.20895 13.96V5.04123ZM14.2848 3.88024C13.8177 3.88024 13.4376 4.26043 13.4376 4.72691C13.4376 5.19372 13.8178 5.57387 14.2848 5.57387C14.7517 5.57387 15.1318 5.19383 15.1318 4.72691C15.1318 4.26033 14.7518 3.88024 14.2848 3.88024ZM9.49988 5.11475C7.0821 5.11475 5.11426 7.08233 5.11426 9.50037C5.11426 11.9184 7.08212 13.8863 9.49988 13.8863C11.9182 13.8863 13.8861 11.9184 13.8861 9.50037C13.8861 7.08262 11.9182 5.11475 9.49988 5.11475ZM6.57293 9.50037C6.57293 7.88658 7.88653 6.57397 9.49988 6.57397C11.1141 6.57397 12.4268 7.88663 12.4268 9.50037C12.4268 11.1146 11.1142 12.4279 9.49988 12.4279C7.88644 12.4279 6.57293 11.1146 6.57293 9.50037Z" fill="#33A4D5"/>
+                    </svg>
+
+                    <span class="title">
+                        <a href="https://www.instagram.com/TROFIMOVA.ASP/" target="_blank">
+                            Trofimova.asp
+                        </a>
+                    </span>
+                </div>
+
+                <div class="instagram-images-container owl-carousel">
+
+                    <div class="item">
+                        <img src="/wp-content/themes/wedding/images/instagram-img1.png">
+                    </div>
+
+                    <div class="item">
+                        <img src="/wp-content/themes/wedding/images/instagram-img2.png">
+                    </div>
+
+                    <div class="item">
+                        <img src="/wp-content/themes/wedding/images/instagram-img3.png">
+                    </div>
+
+                    <div class="item">
+                        <img src="/wp-content/themes/wedding/images/instagram-img4.png">
+                    </div>
+
+                    <div class="item">
+                        <img src="/wp-content/themes/wedding/images/instagram-img5.png">
+                    </div>
+
+                    <div class="item">
+                        <img src="/wp-content/themes/wedding/images/instagram-img6.png">
+                    </div>
+
+                    <div class="item">
+                        <img src="/wp-content/themes/wedding/images/instagram-img3.png">
+                    </div>
+
+                    <div class="item">
+                        <img src="/wp-content/themes/wedding/images/instagram-img1.png">
+                    </div>
+
+                    <div class="item">
+                        <img src="/wp-content/themes/wedding/images/instagram-img2.png">
+                    </div>
+
+                </div>
+
+            </div>
 
             <div class="faq-container">
 

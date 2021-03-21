@@ -589,12 +589,14 @@
 
   .title-block {
     .title {
-      text-transform: uppercase;
-      color: #33A4D5;
-      font-style: normal;
-      font-weight: 500;
-      font-size: 18px;
-      line-height: 26px;
+      a {
+        text-transform: uppercase;
+        color: #33A4D5;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 26px;
+      }
     }
   }
 
@@ -1173,7 +1175,6 @@
     }
 
   }
-
 }
 
 // Все курсы меню

@@ -5377,6 +5377,7 @@ body.page .main-navigation {
 }
 
 .wd-button-white:hover, .wd-button-white:focus {
+  background: #ffffff;
   border: 1px solid #2792C9;
   box-sizing: border-box;
   border-radius: 3px;
@@ -5998,7 +5999,7 @@ body.page .main-navigation {
   overflow: hidden;
 }
 
-.instagram-container .title-block .title {
+.instagram-container .title-block .title a {
   text-transform: uppercase;
   color: #33A4D5;
   font-style: normal;
@@ -6530,6 +6531,24 @@ body.page .main-navigation {
   font-size: 14px;
   line-height: 22px;
   color: #FFFFFF;
+}
+
+@media only screen and (min-width: 360px) {
+  .site-footer {
+    border: 5px solid green;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .site-footer {
+    border: 5px solid red;
+  }
+}
+
+@media only screen and (min-width: 1168px) {
+  .site-footer {
+    border: 5px solid blue;
+  }
 }
 
 #menu-item-193 {

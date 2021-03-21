@@ -4,6 +4,8 @@
 
 (function($) {
 
+    $('.main-menu').first().append('<li id="menu-item-lang" class="menu-item"><a href="#">RU</a></li>');
+
     $('.owl-carousel').owlCarousel({
         loop:true,
         margin:10,
