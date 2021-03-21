@@ -1,0 +1,373 @@
+/*
+ * Chrome renders extra-wide &nbsp; characters for the Hoefler Text font.
+ * This results in a jumping cursor when typing in both the Classic and block
+ * editors. The following font-face override fixes the issue by manually inserting
+ * a custom font that includes just a Hoefler Text space replacement for that
+ * character instead.
+ */
+@font-face {
+	font-family: 'NonBreakingSpaceOverride';
+	src: url(data:application/font-woff2;charset=utf-8;base64,d09GMgABAAAAAAMoAA0AAAAACDQAAALTAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP0ZGVE0cGh4GYACCahEICjx3CywAATYCJANUBCAFhiEHgWwbXQfILgpsY+rQRRARwyAs6uL7pxzYhxEE+32b3aeHmifR6tklkS9hiZA0ewkqGRJE+H7/+6378ASViK/PGeavqJyOzsceKi1s3BCiQsiOdn1r/RBgIJYEgCUhbm/8/8/h4saPssnTNkkiWUBrTRtjmQSajw3Ui3pZ3LYDPD+XG2C3JA/yKAS8/rU5eNfuGqRf4eNNgV4YAlIIgxglEkWe6FYpq10+wi3g+/nUgvgPFczNrz/RsTgVm/zfbPuHZlsuQECxuyqBcQwKFBjFgKO8AqP4bAN9tFJtnM9xPcbNjeXS/x1wY/xU52f5W/X1+9cnH4YwKIaoRRAkUkj/YlAAeF/624foiIDBgBmgQBeGAyhBljUPZUm/l2dTvmpqcBDUOHdbPZWd8JsBAsGr4w8/EDn82/bUPx4eh0YNrQTBuHO2FjQEAGBwK0DeI37DpQVqdERS4gZBhpeUhWCfLFz7J99aEBgsJCHvUGAdAPp4IADDCAPCEFMGpMZ9AQpTfQtQGhLbGVBZFV8BaqNyP68oTZgHNj3M8kBPfXTTC9t90UuzYhy9ciH0grVlOcqyCytisvbsERsEYztiznR0WCrmTksJwbSNK6fd1Rvr25I9oLvctUoEbNOmXJbqgYgPXEHJ82IUsrCnpkxh23F1rfZ2zcRnJYoXtauB3VTFkFXQg3uoZYD5qE0kdjDtoDoF1h2bulGmev5HbYhbrjtohQSRI4aNOkffIcT+d3v6atpaYh3JvPoQsztCcqvaBkppDSPcQ3bw3KaCBo1f5CJWTZEgW3LjLofYg51MaVezrx8xZitYbQ9KYeoRaqQdVLwSEfrKXLK1otCWOKNdR/YwYAfon5Yk8O2MJfSD10dPGA5PIJJQMkah0ugMJiv6x4Dm7LEa8xnrRGGGLAg4sAlbsA07sAt76DOsXKO3hIjtIlpnnFrt1qW4kh6NhS83P/6HB/fl1SMAAA==) format('woff2'),
+		 url(data:application/font-woff;charset=utf-8;base64,d09GRgABAAAAAAUQAA0AAAAACDQAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAABGRlRNAAAE9AAAABwAAAAchf5yU0dERUYAAATYAAAAHAAAAB4AJwAbT1MvMgAAAaAAAABJAAAAYJAcgU5jbWFwAAACIAAAAF4AAAFqUUxBZ2dhc3AAAATQAAAACAAAAAgAAAAQZ2x5ZgAAApAAAAAyAAAAPL0n8y9oZWFkAAABMAAAADAAAAA2Fi93Z2hoZWEAAAFgAAAAHQAAACQOSgWaaG10eAAAAewAAAAzAAAAVC7TAQBsb2NhAAACgAAAABAAAAAsAOQBAm1heHAAAAGAAAAAHQAAACAAWQALbmFtZQAAAsQAAAF6AAADIYvD/Adwb3N0AAAEQAAAAI4AAADsapk2o3jaY2BkYGAA4ov5mwzj+W2+MnCzXwCKMNzgCBSB0LfbQDQ7AxuI4mBgAlEAFKQIRHjaY2BkYGD3+NvCwMDBAALsDAyMDKhAFAA3+wH3AAAAeNpjYGRgYBBl4GBgYgABEMnIABJzAPMZAAVmAGUAAAB42mNgZlJhnMDAysDCKsKygYGBYRqEZtrDYMT4D8gHSmEHjgUFOQwODAqqf9g9/rYwMLB7MNUAhRlBcsxBrMlASoGBEQAj8QtyAAAAeNrjYGBkAAGmWQwMjO8gmBnIZ2NA0ExAzNjAAFYJVn0ASBsD6VAIDZb7AtELAgANIgb9AHjaY2BgYGaAYBkGRgYQSAHyGMF8FgYPIM3HwMHAxMDGoMCwQIFLQV8hXvXP//9AcRCfAcb///h/ygPW+w/vb7olBjUHCTCyMcAFGZmABBO6AogThgZgIUsXAEDcEzcAAHjaY2BgECMCyoEgACZaAed42mNgYmRgYGBnYGNgYAZSDJqMgorCgoqCjECRXwwNrCAKSP5mAAFGBiRgyAAAi/YFBQAAeNqtkc1OwkAUhU/5M25cEhcsZick0AwlBJq6MWwgJkAgYV/KAA2lJeUn+hY+gktXvpKv4dLTMqKycGHsTZNv7px7z50ZAFd4hYHjdw1Ls4EiHjVncIFnzVnc4F1zDkWjrzmPW+NNcwGlzIRKI3fJlUyrEjZQxb3mDH2fNGfRx4vmHKqG0JzHg6E0F9DOlFBGBxUI1GEzLNT4S0aLuTtsGAEUuYcQHkyg3KmIum1bNUvKlrjbbAIleqHHnS4iSudpQcySMYtdFiXlAxzSbAwfMxK6kZoHKhbjjespMTioOPZnzI+4ucCeTVyKMVKLfeAS6vSWaTinuZwzyy/Dc7vaed+6KaV0kukdPUk6yOcctZPvvxxqksq2lEW8RvHjMEO2FCl/zy6p3NEm0R9OFSafJdldc4QVeyaaObMBO0/5cCaa6d9Ggyubxire+lEojscdjoWUR1xGOy8KD8mG2ZLO2l2paDc3A39qmU2z2W5YNv5+u79e6QfGJY/hAAB42m3NywrCMBQE0DupWp/1AYI7/6DEaLQu66Mrd35BKUWKJSlFv1+rue4cGM7shgR981qSon+ZNwUJ8iDgoYU2OvDRRQ99DDDECAHGmGCKmf80hZSx/Kik/LliFbtmN6xmt+yOjdg9GztV4tROnRwX/Bsaaw51nt4Lc7tWaZYHp/MlzKx51LZs5htNri+2AAAAAQAB//8AD3jaY2BkYGDgAWIxIGZiYARCESBmAfMYAAR6AEMAAAABAAAAANXtRbgAAAAA2AhRFAAAAADYCNuG) format('woff');
+
+}
+
+@font-face {
+	font-family: 'Gilroy-Bold';
+	font-style: normal;
+	font-weight: normal;
+	src: local('Gilroy-Bold'), url('./fonts/Gilroy/Gilroy-Bold.woff') format('woff');
+}
+
+
+@font-face {
+	font-family: 'Gilroy-Heavy';
+	font-style: normal;
+	font-weight: normal;
+	src: local('Gilroy-Heavy'), url('./fonts/Gilroy/Gilroy-Heavy.woff') format('woff');
+}
+
+
+@font-face {
+	font-family: 'Gilroy-Light';
+	font-style: normal;
+	font-weight: normal;
+	src: local('Gilroy-Light'), url('./fonts/Gilroy/Gilroy-Light.woff') format('woff');
+}
+
+
+@font-face {
+	font-family: 'Gilroy-Medium';
+	font-style: normal;
+	font-weight: normal;
+	src: local('Gilroy-Medium'), url('./fonts/Gilroy/Gilroy-Medium.woff') format('woff');
+}
+
+
+@font-face {
+	font-family: 'Gilroy-Regular';
+	font-style: normal;
+	font-weight: normal;
+	src: local('Gilroy-Regular'), url('./fonts/Gilroy/Gilroy-Regular.woff') format('woff');
+}
+
+@font-face {
+	font-family: 'Montserrat Regular';
+	font-style: normal;
+	font-weight: normal;
+	src: local('Montserrat Regular'), url('./fonts/Montserrat/Montserrat-Regular.woff') format('woff');
+}
+
+
+@font-face {
+	font-family: 'Montserrat Italic';
+	font-style: normal;
+	font-weight: normal;
+	src: local('Montserrat Italic'), url('./fonts/Montserrat/Montserrat-Italic.woff') format('woff');
+}
+
+
+@font-face {
+	font-family: 'Montserrat Thin';
+	font-style: normal;
+	font-weight: normal;
+	src: local('Montserrat Thin'), url('./fonts/Montserrat/Montserrat-Thin.woff') format('woff');
+}
+
+
+@font-face {
+	font-family: 'Montserrat Thin Italic';
+	font-style: normal;
+	font-weight: normal;
+	src: local('Montserrat Thin Italic'), url('./fonts/Montserrat/Montserrat-ThinItalic.woff') format('woff');
+}
+
+
+@font-face {
+	font-family: 'Montserrat ExtraLight';
+	font-style: normal;
+	font-weight: normal;
+	src: local('Montserrat ExtraLight'), url('./fonts/Montserrat/Montserrat-ExtraLight.woff') format('woff');
+}
+
+
+@font-face {
+	font-family: 'Montserrat ExtraLight Italic';
+	font-style: normal;
+	font-weight: normal;
+	src: local('Montserrat ExtraLight Italic'), url('./fonts/Montserrat/Montserrat-ExtraLightItalic.woff') format('woff');
+}
+
+
+@font-face {
+	font-family: 'Montserrat Light';
+	font-style: normal;
+	font-weight: normal;
+	src: local('Montserrat Light'), url('./fonts/Montserrat/Montserrat-Light.woff') format('woff');
+}
+
+
+@font-face {
+	font-family: 'Montserrat Light Italic';
+	font-style: normal;
+	font-weight: normal;
+	src: local('Montserrat Light Italic'), url('./fonts/Montserrat/Montserrat-LightItalic.woff') format('woff');
+}
+
+
+@font-face {
+	font-family: 'Montserrat Medium';
+	font-style: normal;
+	font-weight: normal;
+	src: local('Montserrat Medium'), url('./fonts/Montserrat/Montserrat-Medium.woff') format('woff');
+}
+
+
+@font-face {
+	font-family: 'Montserrat Medium Italic';
+	font-style: normal;
+	font-weight: normal;
+	src: local('Montserrat Medium Italic'), url('./fonts/Montserrat/Montserrat-MediumItalic.woff') format('woff');
+}
+
+
+@font-face {
+	font-family: 'Montserrat SemiBold';
+	font-style: normal;
+	font-weight: normal;
+	src: local('Montserrat SemiBold'), url('./fonts/Montserrat/Montserrat-SemiBold.woff') format('woff');
+}
+
+
+@font-face {
+	font-family: 'Montserrat SemiBold Italic';
+	font-style: normal;
+	font-weight: normal;
+	src: local('Montserrat SemiBold Italic'), url('./fonts/Montserrat/Montserrat-SemiBoldItalic.woff') format('woff');
+}
+
+
+@font-face {
+	font-family: 'Montserrat Bold';
+	font-style: normal;
+	font-weight: normal;
+	src: local('Montserrat Bold'), url('./fonts/Montserrat/Montserrat-Bold.woff') format('woff');
+}
+
+
+@font-face {
+	font-family: 'Montserrat Bold Italic';
+	font-style: normal;
+	font-weight: normal;
+	src: local('Montserrat Bold Italic'), url('./fonts/Montserrat/Montserrat-BoldItalic.woff') format('woff');
+}
+
+
+@font-face {
+	font-family: 'Montserrat ExtraBold';
+	font-style: normal;
+	font-weight: normal;
+	src: local('Montserrat ExtraBold'), url('./fonts/Montserrat/Montserrat-ExtraBold.woff') format('woff');
+}
+
+
+@font-face {
+	font-family: 'Montserrat ExtraBold Italic';
+	font-style: normal;
+	font-weight: normal;
+	src: local('Montserrat ExtraBold Italic'), url('./fonts/Montserrat/Montserrat-ExtraBoldItalic.woff') format('woff');
+}
+
+
+@font-face {
+	font-family: 'Montserrat Black';
+	font-style: normal;
+	font-weight: normal;
+	src: local('Montserrat Black'), url('./fonts/Montserrat/Montserrat-Black.woff') format('woff');
+}
+
+
+@font-face {
+	font-family: 'Montserrat Black Italic';
+	font-style: normal;
+	font-weight: normal;
+	src: local('Montserrat Black Italic'), url('./fonts/Montserrat/Montserrat-BlackItalic.woff') format('woff');
+}
+
+// Open sans
+
+@font-face {
+	font-family: 'Open Sans Regular';
+	font-style: normal;
+	font-weight: normal;
+	src: local('Open Sans Regular'), url('./fonts/OpenSans/OpenSans-Regular.woff') format('woff');
+}
+
+
+@font-face {
+	font-family: 'Open Sans';
+	font-style: normal;
+	font-weight: normal;
+	src: local('Open Sans'), url('./fonts/OpenSans/OpenSans-Regular.woff') format('woff');
+}
+
+
+@font-face {
+	font-family: 'Open Sans Italic';
+	font-style: normal;
+	font-weight: normal;
+	src: local('Open Sans Italic'), url('./fonts/OpenSans/OpenSans-Italic.woff') format('woff');
+}
+
+
+@font-face {
+	font-family: 'Open Sans Light';
+	font-style: normal;
+	font-weight: normal;
+	src: local('Open Sans Light'), url('./fonts/OpenSans/OpenSans-Light.woff') format('woff');
+}
+
+
+@font-face {
+	font-family: 'Open Sans Light Italic';
+	font-style: normal;
+	font-weight: normal;
+	src: local('Open Sans Light Italic'), url('vOpenSans-LightItalic.woff') format('woff');
+}
+
+
+@font-face {
+	font-family: 'Open Sans SemiBold';
+	font-style: normal;
+	font-weight: normal;
+	src: local('Open Sans SemiBold'), url('./fonts/OpenSans/OpenSans-SemiBold.woff') format('woff');
+}
+
+
+@font-face {
+	font-family: 'Open Sans SemiBold Italic';
+	font-style: normal;
+	font-weight: normal;
+	src: local('Open Sans SemiBold Italic'), url('./fonts/OpenSans/OpenSans-SemiBoldItalic.woff') format('woff');
+}
+
+
+@font-face {
+	font-family: 'Open Sans Bold';
+	font-style: normal;
+	font-weight: normal;
+	src: local('Open Sans Bold'), url('./fonts/OpenSans/OpenSans-Bold.woff') format('woff');
+}
+
+
+@font-face {
+	font-family: 'Open Sans Bold Italic';
+	font-style: normal;
+	font-weight: normal;
+	src: local('Open Sans Bold Italic'), url('./fonts/OpenSans/OpenSans-BoldItalic.woff') format('woff');
+}
+
+
+@font-face {
+	font-family: 'Open Sans ExtraBold';
+	font-style: normal;
+	font-weight: normal;
+	src: local('Open Sans ExtraBold'), url('./fonts/OpenSans/OpenSans-ExtraBold.woff') format('woff');
+}
+
+
+@font-face {
+	font-family: 'Open Sans ExtraBold Italic';
+	font-style: normal;
+	font-weight: normal;
+	src: local('Open Sans ExtraBold Italic'), url('./fonts/OpenSans/OpenSans-ExtraBoldItalic.woff') format('woff');
+}
+
+
+@font-face {
+	font-family: 'Open Sans Light Regular';
+	font-style: normal;
+	font-weight: normal;
+	src: local('Open Sans Light Regular'), url('./fonts/OpenSans/OpenSans-Light-webfont.woff') format('woff');
+}
+
+
+@font-face {
+	font-family: 'Open Sans Condensed Bold';
+	font-style: normal;
+	font-weight: normal;
+	src: local('Open Sans Condensed Bold'), url('./fonts/OpenSans/OpenSans-CondBold.woff') format('woff');
+}
+
+// Font and typographic variables
+
+//$font__body: "NonBreakingSpaceOverride", "Hoefler Text", Garamond, "Times New Roman", serif;
+$font__body: "Gilroy-Medium";
+//$font__heading: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+$font__heading: "Gilroy-Medium";
+$font__fallbacks: (
+	/* Arabic */
+	ar: 'Tahoma, Arial, sans-serif',
+	ary: 'Tahoma, Arial, sans-serif',
+	azb: 'Tahoma, Arial, sans-serif',
+	ckb: 'Tahoma, Arial, sans-serif',
+	fa-IR: 'Tahoma, Arial, sans-serif',
+	haz: 'Tahoma, Arial, sans-serif',
+	ps: 'Tahoma, Arial, sans-serif',
+	/* Cyrillic */
+	//be: '"Helvetica Neue", Helvetica, "Segoe UI", Arial, sans-serif',
+	be: '"Gilroy-Medium"',
+	bg-BG: '"Gilroy-Medium"',
+	kk: '"Gilroy-Medium"',
+	mk-MK: '"Gilroy-Medium"',
+	mn: '"Gilroy-Medium"',
+	ru-RU: '"Gilroy-Medium"',
+	sah: '"Gilroy-Medium"',
+	sr-RS: '"Gilroy-Medium"',
+	tt-RU: '"Gilroy-Medium"',
+	uk: '"Gilroy-Medium"',
+	/* Chinese (Hong Kong) */
+	zh-HK: '-apple-system, BlinkMacSystemFont, "PingFang HK", "Helvetica Neue", "Microsoft YaHei New", STHeiti Light, sans-serif',
+	/* Chinese (Taiwan) */
+	zh-TW: '-apple-system, BlinkMacSystemFont, "PingFang TC", "Helvetica Neue", "Microsoft YaHei New", STHeiti Light, sans-serif',
+	/* Chinese (China) */
+	zh-CN: '-apple-system, BlinkMacSystemFont, "PingFang SC", "Helvetica Neue", "Microsoft YaHei New", STHeiti Light, sans-serif',
+	/* Devanagari */
+	bn-BD: 'Arial, sans-serif',
+	hi-IN: 'Arial, sans-serif',
+	mr: 'Arial, sans-serif',
+	ne-NP: 'Arial, sans-serif',
+	/* Greek */
+	el: '"Helvetica Neue", Helvetica, Arial, sans-serif',
+	/* Gujarati */
+	gu: 'Arial, sans-serif',
+	/* Hebrew */
+	he-IL: '"Arial Hebrew", Arial, sans-serif',
+	/* Japanese */
+	ja: '-apple-system, BlinkMacSystemFont, "Hiragino Sans", Meiryo, "Helvetica Neue", sans-serif',
+	/* Korean */
+	ko-KR: '"Apple SD Gothic Neo", "Malgun Gothic", "Nanum Gothic", Dotum, sans-serif',
+	/* Thai */
+	th: '"Sukhumvit Set", "Helvetica Neue", helvetica, arial, sans-serif',
+	/* Vietnamese */
+	vi: '"Libre Franklin", sans-serif',
+);
+$font__code: Menlo, monaco, Consolas, Lucida Console, monospace;
+$font__pre: "Courier 10 Pitch", Courier, monospace;
+
+$font__size_base: 22px;
+$font__size-ratio: 1.125;
+
+$font__size-xxs:   1em / (1.5 * $font__size-ratio);
+$font__size-xs:    1em / (1.25 * $font__size-ratio);
+$font__size-sm:    1em / (1 * $font__size-ratio);
+$font__size-md:    1em * (1 * $font__size-ratio);
+$font__size-lg:    1em * (1.5 * $font__size-ratio);
+$font__size-xl:    1em * (2 * $font__size-ratio);
+$font__size-xxl:   1em * (2.5 * $font__size-ratio);
+$font__size-xxxl:  1em * (3 * $font__size-ratio);
+
+$font__line-height-body: 1.8;
+$font__line-height-pre: 1.6;
+$font__line-height-heading: 1.2;
+$font__line-height-double:  2 * $font__line-height-heading;

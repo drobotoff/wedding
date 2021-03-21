@@ -1,0 +1,76 @@
+
+@import 'node_modules/flexbox-grid-mixins/sass/flexbox-grid-mixins';
+
+$default-grid-gutter: 2%;
+
+.grid {
+
+  @include grid($gutter: $default-grid-gutter, $flex-flow: row wrap);
+
+  > .grid__col-1 {
+    @include grid-col($col: 1, $gutter: $default-grid-gutter);
+  }
+
+  > .grid__col-2 {
+    @include grid-col($col: 2, $gutter: $default-grid-gutter);
+  }
+
+  > .grid__col-3 {
+    @include grid-col($col: 3, $gutter: $default-grid-gutter);
+  }
+
+  > .grid__col-4 {
+    @include grid-col($col: 4, $gutter: $default-grid-gutter);
+  }
+
+  > .grid__col-5 {
+    @include grid-col($col: 5, $gutter: $default-grid-gutter);
+  }
+
+  > .grid__col-6 {
+    @include grid-col($col: 6, $gutter: $default-grid-gutter);
+  }
+
+  > .grid__col-7 {
+    @include grid-col($col: 7, $gutter: $default-grid-gutter);
+  }
+
+  > .grid__col-8 {
+    @include grid-col($col: 8, $gutter: $default-grid-gutter);
+  }
+
+  > .grid__col-9 {
+    @include grid-col($col: 9, $gutter: $default-grid-gutter);
+  }
+
+  > .grid__col-10 {
+    @include grid-col($col: 10, $gutter: $default-grid-gutter);
+  }
+
+  > .grid__col-11 {
+    @include grid-col($col: 11, $gutter: $default-grid-gutter);
+  }
+
+  > .grid__col-12 {
+    @include grid-col($col: 12, $gutter: $default-grid-gutter);
+  }
+}
+
+.container {
+
+  @include media(mobile) {
+    margin: 0 auto;
+    width: $mobile_width;
+  }
+
+  @include media(tablet) {
+    margin: 0 auto;
+    width: $tablet_width;
+  }
+
+  @include media(desktop) {
+    margin: 0 auto;
+    width: $desktop_width;
+  }
+
+}
