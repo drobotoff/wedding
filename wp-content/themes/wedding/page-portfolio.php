@@ -10,6 +10,8 @@
  */
 
 get_header();
+wp_enqueue_script('wedding-countdown', get_theme_file_uri('/js/countdown.min.js'), array('jquery'), false, true);
+
 ?>
 
     <div id="primary" class="content-area">
@@ -40,6 +42,38 @@ get_header();
             </header>
 
     </div>
+
+    <div class="promo-wrap">
+        <div class="description-container">
+            <span class="title">Хочешь стать успешным мастером?</span>
+            <img class="h-del" src="<?= get_theme_file_uri('/images/h-del.svg') ?>" />
+            <div class="description">Только до конца февраля на курс действует выгодное предложение</div>
+        </div>
+        <div class="right-container">
+            <div class="price-container">
+                <span class="price-before">25 600</span>
+                <span class="price">20 400 ₽</span>
+            </div>
+            <div id="countdownTimer" class="countdown">
+                <span class="ends-in">до конца акции осталось</span>
+                <div class="timer">
+                    <div class="hours"></div>:<div class="minutes"></div>:<div class="seconds"></div>
+                </div>
+            </div>
+        </div>
+        <button class="wd-button buy">Купить</button>
+    </div>
+    <script>
+        const now = new Date();
+        const twoHoursLater = now.setHours(now.getHours() + 2);
+        jQuery(document).ready(function($) {
+            $('#countdownTimer').countdown(twoHoursLater, function(event) {
+                this.querySelector('.hours').textContent = event.strftime('%H');
+                this.querySelector('.minutes').textContent = event.strftime('%M');
+                this.querySelector('.seconds').textContent = event.strftime('%S');
+            });
+        });
+    </script>
 
     </main><!-- #main -->
     </div><!-- #primary -->
