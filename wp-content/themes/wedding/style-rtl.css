@@ -5359,6 +5359,10 @@ body.page .main-navigation {
   color: #ffffff;
 }
 
+.wd-button a {
+  color: #ffffff;
+}
+
 .wd-button:hover, .wd-button:focus {
   background: #2792C9;
 }
@@ -6533,24 +6537,6 @@ body.page .main-navigation {
   color: #FFFFFF;
 }
 
-@media only screen and (min-width: 360px) {
-  .site-footer {
-    border: 5px solid green;
-  }
-}
-
-@media only screen and (min-width: 768px) {
-  .site-footer {
-    border: 5px solid red;
-  }
-}
-
-@media only screen and (min-width: 1168px) {
-  .site-footer {
-    border: 5px solid blue;
-  }
-}
-
 #menu-item-193 {
   background: url("./images/course-icon.svg") no-repeat center right;
 }
@@ -6759,6 +6745,142 @@ body.page .main-navigation {
   font-size: 14px;
   line-height: 20px;
   color: #33A4D5;
+}
+
+.portfolio-container {
+  margin-top: 30px;
+}
+
+.portfolio-container ul {
+  list-style: none;
+  padding: 0;
+}
+
+.portfolio-container ul li label, .portfolio-container ul li a {
+  font-family: "Montserrat Medium";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 30px;
+  color: #3D4C68;
+}
+
+.portfolio-container ul li.selected {
+  padding-right: 30px;
+  background: url("./images/menu-arrow-blue2.svg") no-repeat 100% 15%;
+}
+
+.portfolio-container ul li.selected a {
+  font-family: "Montserrat Medium";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 30px;
+  color: #085F97;
+}
+
+.portfolio-container .price-title {
+  font-family: "Gilroy-Medium";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 30px;
+  color: #085F97;
+}
+
+.portfolio-container .online-block {
+  color: #3D4C68;
+  position: relative;
+}
+
+.portfolio-container .online-block .online {
+  background: url(./images/switch-on.svg) no-repeat;
+  width: 44px;
+  height: 22px;
+  position: absolute;
+  top: 8px;
+}
+
+.portfolio-container .items {
+  margin-top: 100px;
+}
+
+.portfolio-container .items .item-container .item {
+  background: #FFFFFF;
+  border-radius: 3px;
+  box-shadow: 0px 5px 20px rgba(17, 33, 62, 0.15);
+  position: relative;
+}
+
+.portfolio-container .items .item-container .item:hover {
+  box-shadow: 0px 5px 50px rgba(8, 95, 151, 0.3);
+  width: 102%;
+  margin-right: -1%;
+  margin-left: 1%;
+}
+
+.portfolio-container .items .item-container .item .title-sub {
+  margin-top: 34px;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 26px;
+  color: #949BA4;
+}
+
+.portfolio-container .items .item-container .item .title-sub strong {
+  font-family: "Gilroy-Medium";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 17px;
+  line-height: 22px;
+  color: #085F97;
+}
+
+.portfolio-container .items .item-container .item .title {
+  margin-top: 10px;
+  font-family: "Montserrat Medium";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 26px;
+  line-height: 34px;
+  color: #085F97;
+}
+
+.portfolio-container .items .item-container .item .image {
+  margin-top: 10px;
+  margin-right: 40px;
+}
+
+.portfolio-container .items .item-container .item .image img {
+  width: 223px;
+}
+
+.portfolio-container .items .item-container .item .price-container {
+  margin-top: 20px;
+}
+
+.portfolio-container .items .item-container .item .price {
+  color: #0A2555;
+}
+
+.portfolio-container .items .item-container .item .price-before {
+  color: #33A4D5;
+  text-decoration-line: line-through;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 30px;
+}
+
+.portfolio-container .items .item-container .item .date {
+  font-family: "Gilroy-Medium";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 22px;
+  color: #D6E1F0;
+  margin-bottom: 20px;
 }
 
 /* Widgets */

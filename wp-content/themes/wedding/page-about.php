@@ -68,8 +68,8 @@ get_header();
 
                         <div class="button-container">
 
-                            <button class="wd-button">Все курсы</button>
-                            <button class="wd-button-white">Примеры работ</button>
+                            <button class="wd-button"><a href="/courses">Все курсы</a></button>
+                            <button class="wd-button-white"><a href="/portfolio">Примеры работ</a></button>
 
                         </div>
 

@@ -39,9 +39,6 @@ get_header();
                 </div>
             </header>
 
-
-
-
     </div>
 
     </main><!-- #main -->
