@@ -61,6 +61,7 @@ wp_enqueue_script('wedding-countdown', get_theme_file_uri('/js/countdown.min.js'
                 </div>
             </div>
         </div>
+        <div class="clearfix"></div>
         <button class="wd-button action">Купить</button>
     </div>
     <script>
