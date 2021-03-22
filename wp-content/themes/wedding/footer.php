@@ -122,7 +122,7 @@
 
                     <div>&copy; Copyright Трофимова Юлия 2020. Все права защищены.</div>
                     <div>
-                        <a href="/privacy-policy">Политика конфидициальности</a> |
+                        <a href="/privacy-policy">Политика конфиденциальности</a> |
                         <a href="/terms-of-use">Пользовательское соглашение</a>
                     </div>
 

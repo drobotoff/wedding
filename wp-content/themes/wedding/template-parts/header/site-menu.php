@@ -55,7 +55,7 @@
         <div class="block-2-container">
             <ul>
                 <li>Платные</li>
-                <li class="selected">Безплатные</li>
+                <li class="selected">Бесплатные</li>
                 <li>Любые</li>
                 <li class="online-block">
                     Онлайн
@@ -65,11 +65,11 @@
             <div style="clear:both;"></div>
             <div class="line"></div>
             <div class="items">
-                <div class="item">Свадеьное платье моей дочери в две строчки</div>
-                <div class="item selected">Свадеьное платье моей дочери в две строчки</div>
-                <div class="item">Свадеьное платье моей дочери в две строчки</div>
-                <div class="item">Свадеьное платье моей дочери в две строчки</div>
-                <div class="item">Свадеьное платье моей дочери в две строчки</div>
+                <div class="item">Свадебное платье моей дочери в две строчки</div>
+                <div class="item selected">Свадебное платье моей дочери в две строчки</div>
+                <div class="item">Свадебное платье моей дочери в две строчки</div>
+                <div class="item">Свадебное платье моей дочери в две строчки</div>
+                <div class="item">Свадебное платье моей дочери в две строчки</div>
             </div>
         </div>
     </div>

@@ -76,7 +76,7 @@ wp_enqueue_script('wedding-countdown', get_theme_file_uri('/js/countdown.min.js'
                                 </li>
                                 <li>
                                     <label for="filter-price1">
-                                        <input id="filter-price1" type="radio" name="price" value="1"/> Безплатно
+                                        <input id="filter-price1" type="radio" name="price" value="1"/> Бесплатно
                                     </label>
                                 </li>
                                 <li>
